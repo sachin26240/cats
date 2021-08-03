@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#"> <img src="catlogo.jpeg" width="30" height="30" alt="logo"
+                style="border-radius: 50%;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Cats
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#event">Events</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#voice">Voice</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#bottom">Contact Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div style="width:98%; background:black; margin:auto;">
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" style="width: 60%; margin:auto">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2000">
+                    <img src="cat1.jpeg" class="d-block w-100" alt="cat">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="cat2.jpeg" class="d-block w-100" alt="cat">
+                </div>
+                <div class="carousel-item" style="margin:auto;">
+                    <img src="cat3.jpg" class="d-block w-100" alt="cat">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div id='event' style="margin:10px;">
+        <h1>Events</h1>
+        <iframe width="80%" height="700" style="margin: auto;" src="https://www.youtube.com/embed/X0Twsi1Zry8"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div id='voice' style="margin:10px;">
+        <h1>Voice</h1>
+        <ul>
+            <li>
+                Street Cat Voice<br>
+                <audio controls>
+                    <source src="Street-cat-meowing-cat-noises.mp3" type="audio/mpeg">
+            </li>
+            <li>Angry Cat Voice<br>
+                <audio controls>
+                    <source src="Angry-cat-sound-effect.mp3" type="audio/mpeg">
+            </li>
+            <li>
+                Cute Cat Voice<br>
+                <audio controls>
+                    <source src="Cute-cat-meowing-on-the-street.mp3" type="audio/mpeg">
+            </li>
+        </ul>
+    </div>
+    <footer class="footer text-faded text-center py-5" style="background-color: rgb(102, 100, 96);">
+        <div class="container">
+            <p class="m-0 small" id='bottom' style=" color:rgb(251, 253, 255);"><b style="font-size: large;">Contact
+                    Us</b><br>abc@gmail.com<br>+91
+                9988998899</p>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+</script>
+
+</html>
