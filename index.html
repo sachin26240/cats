@@ -19,6 +19,119 @@
         p {
             font-family: myFirstFont;
         }
+
+        #container {
+            padding-top: 70px;
+        }
+
+
+        .spinimg {
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        .spinimg:hover {
+            transform: rotate(360deg);
+        }
+
+        .head {
+            cursor: pointer;
+            width: 250px;
+            background: rgb(139, 235, 219);
+            transition: width 2s;
+            text-align: center;
+
+            transition: 1.0s ease all;
+            -moz-transition: 1.0s ease all;
+            -webkit-transition: 1.0s ease all;
+
+            -webkit-animation: myfirst 10s;
+            /* Chrome, Safari, Opera */
+            animation: myfirst 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes myfirst {
+            from {
+                background: rgb(175, 248, 78);
+            }
+
+            to {
+                background: rgb(73, 205, 238);
+            }
+        }
+
+        /* Standard syntax */
+        @keyframes myfirst {
+            from {
+                background: rgb(175, 248, 78);
+            }
+
+            to {
+                background: rgb(73, 205, 238);
+            }
+        }
+
+        .head:hover {
+            background: rgb(168, 223, 81);
+            width: 300px;
+            color: rgb(143, 218, 228);
+            -webkit-animation: myhover 10s;
+            /* Chrome, Safari, Opera */
+            animation: myhover 10s;
+            animation-iteration-count: infinite;
+            transform: rotateX(360deg);
+            -moz-transform: rotateX(360deg);
+            -webkit-transform: rotateX(360deg);
+            transform-origin: center;
+            -moz-transform-origin: center;
+            -webkit-transform-origin: center;
+
+            transition: transform 1.0s ease all;
+            -moz-transition: -moz-transform 1.0s ease all;
+            -webkit-transition: -webkit-transform 1.0s ease all;
+        }
+
+        @-webkit-keyframes myhover {
+            0% {
+                background: red;
+            }
+
+            25% {
+                background: yellow;
+            }
+
+            50% {
+                background: blue;
+            }
+
+            100% {
+                background: green;
+            }
+        }
+
+        /* Standard syntax */
+        @keyframes myhover {
+            0% {
+                background: red;
+            }
+
+            25% {
+                background: yellow;
+            }
+
+            50% {
+                background: blue;
+            }
+
+            100% {
+                background: green;
+            }
+        }
+
+        [class|=cat] {
+            border-style: solid;
+            border-color: rgb(121, 111, 108);
+        }
     </style>
 </head>
 
@@ -52,7 +165,7 @@
             </ul>
         </div>
     </nav>
-    <div style="padding-top: 70px;">
+    <div id='container'>
         <div style="width:95%; background:black; margin:auto;">
             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel"
                 style="width: 60%; margin:auto">
@@ -77,9 +190,11 @@
                 </a>
             </div>
         </div>
-
+        <br>
         <div id='event' style="margin:auto ;width:95%">
-            <h1>Events</h1>
+            <div class="head">
+                <h1>Events</h1>
+            </div>
             <p>
                 A cat show is a judged event where the owners of cats compete to win titles in various cat registering
                 organizations by entering their cats to be judged after a breed standard. Both pedigreed and companion
@@ -94,7 +209,9 @@
                 allowfullscreen></iframe>
         </div>
         <div id='voice' style="margin:auto; width:95%">
-            <h1>Voice</h1>
+            <div class="head">
+                <h1>Voice</h1>
+            </div>
             <p>
                 All cats make sounds — from meows and purrs to growls and hisses — but some felines are more vocal than
                 others. ... Cats communicate with meows, chirrups, hisses, purrs, chatters, and growls, but the
@@ -118,7 +235,9 @@
             </ul>
         </div>
         <div id="breedtbl" class="table-responsive-md table-striped" style="margin:auto; width:95%">
-            <h1>Breed Table</h1>
+            <div class="head">
+                <h1>Breed Table</h1>
+            </div>
             <table class="table">
                 <thead>
                     <tr>
@@ -135,27 +254,33 @@
                         <td>Abyssinian</td>
                         <td>Unspecified, but somewhere in Afro-Asia likely Ethiopia</td>
                         <td>Semi-foreign</td>
-                        <td><img src="cattable1.jpg" alt="cat"></td>
+                        <td>
+                            <figure class="spinimg"><img class="cat-img" src="cattable1.jpg" alt="cat"></figure>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Aegean</td>
                         <td>Greece</td>
                         <td>Moderate</td>
-                        <td><img src="cattable2.jpg" alt="cat"></td>
+                        <td>
+                            <figure class="spinimg"><img class="cat-img" src="cattable2.jpg" alt="cat"></figure>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>American Bobtail</td>
                         <td>United States</td>
                         <td>Cobby</td>
-                        <td><img src="cattable3.jpg" alt="cat"></td>
+                        <td>
+                            <figure class="spinimg"><img class="cat-img" src="cattable3.jpg" alt="cat"></figure>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <footer class="footer text-faded text-center py-5" style="background-color: rgb(102, 100, 96);">
-            <div class="container">
+            <div class="container" id="foot">
                 <p class="m-0 small" id='bottom' style=" color:rgb(251, 253, 255);"><b style="font-size: large;">Contact
                         Us</b><br>abc@gmail.com<br>+91
                     9988998899</p>
@@ -168,6 +293,9 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    function myFunction() {
+        document.querySelector("#foot").style.backgroundColor = "red";
+    }
 </script>
 
 </html>
