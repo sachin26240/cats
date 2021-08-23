@@ -280,7 +280,7 @@
             </table>
         </div>
         <footer class="footer text-faded text-center py-5" style="background-color: rgb(102, 100, 96);">
-            <div class="container" id="foot">
+            <div class="container" id="foot" onclick=myFunction()>
                 <p class="m-0 small" id='bottom' style=" color:rgb(251, 253, 255);"><b style="font-size: large;">Contact
                         Us</b><br>abc@gmail.com<br>+91
                     9988998899</p>
@@ -293,8 +293,10 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+</script>
+<script>
     function myFunction() {
-        document.querySelector("#foot").style.backgroundColor = "red";
+        document.querySelector(".container p").style.color = 'rgb(148, 190, 231)';
     }
 </script>
 
