@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         @font-face {
@@ -144,6 +145,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <input type="text" id='search' placeholder="Search..">
+        <button type="submit"><i class="fa fa-search"></i></button>
+
         <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item px-3">
@@ -195,14 +199,34 @@
             <div class="head">
                 <h1>Events</h1>
             </div>
-            <p>
-                A cat show is a judged event where the owners of cats compete to win titles in various cat registering
-                organizations by entering their cats to be judged after a breed standard. Both pedigreed and companion
-                (or moggy) cats are admissible, although the rules differ from organization to organization. Cats are
-                compared to a breed standard, and the owners of those judged to be closest to it are awarded a prize.
-                Moggys are judged based on their temperament. Often, at the end of the year, all of the points accrued
-                at various shows are added up and more national and regional titles are awarded.
-            </p>
+            <div class="row">
+                <div class="col">
+                    <p>
+                        A cat show is a judged event where the owners of cats compete to win titles in various cat
+                        registering
+                        organizations by entering their cats to be judged after a breed standard. Both pedigreed and
+                        companion
+                        (or moggy) cats are admissible, although the rules differ from organization to organization.
+                        Cats are
+                        compared to a breed standard, and the owners of those judged to be closest to it are awarded a
+                        prize.
+                        Moggys are judged based on their temperament. Often, at the end of the year, all of the points
+                        accrued
+                        at various shows are added up and more national and regional titles are awarded.
+                    </p>
+                </div>
+                <div class="col">
+                    <p>
+                        Imagine an event where you can mingle with other cat people, shop unique cat-related merch,
+                        visit adoptable cats, meet and greet your favourite Instagram-famous kitties, attend seminars,
+                        take green-screen selfies while rocking cat ears, and so much more. Welcome to cat lover Susan
+                        Michals’s fourth annual CatCon, an event designed by and for cat people. We asked Susan some
+                        questions about the event and some of this year’s not-to-be-missed highlights. Mark your
+                        calendar, this is an event you’re not going to want to miss.
+                    </p>
+                </div>
+            </div>
+
             <iframe width="60%" height="400" style="margin: auto;" src="https://www.youtube.com/embed/X0Twsi1Zry8"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -212,6 +236,13 @@
             <div class="head">
                 <h1>Voice</h1>
             </div>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#voice">Voice</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cat</li>
+                </ol>
+            </nav>
             <p>
                 All cats make sounds — from meows and purrs to growls and hisses — but some felines are more vocal than
                 others. ... Cats communicate with meows, chirrups, hisses, purrs, chatters, and growls, but the
@@ -279,8 +310,18 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="jumbotron jumbotron-fluid" style="margin:auto; width:95%">
+            <div class="container">
+                <h1 class="display-4">Cats</h1>
+                <p class="lead">
+                    <h2>If you want to read more about cats, please go <a href="https://en.wikipedia.org/wiki/Cat"
+                            target="_blank">here</a></h2>
+                </p>
+            </div>
+        </div><br>
         <footer class="footer text-faded text-center py-5" style="background-color: rgb(102, 100, 96);">
-            <div class="container" id="foot" onclick=myFunction()>
+            <div class="container foot" onclick=myFunction()>
                 <p class="m-0 small" id='bottom' style=" color:rgb(251, 253, 255);"><b style="font-size: large;">Contact
                         Us</b><br>abc@gmail.com<br>+91
                     9988998899</p>
@@ -296,7 +337,7 @@
 </script>
 <script>
     function myFunction() {
-        document.querySelector(".container p").style.color = 'rgb(148, 190, 231)';
+        document.querySelector(".foot p").style.color = 'rgb(148, 190, 231)';
     }
 </script>
 
