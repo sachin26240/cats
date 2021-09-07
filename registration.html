@@ -13,15 +13,15 @@
     <div class="container">
         <div class="title">Registration for Event</div>
         <div class="content">
-            <form action="index.html">
+            <form action="index.html" name="myForm" onsubmit="return validateForm()">
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
-                        <input type="text" placeholder="Enter your name" required>
+                        <input type="text" name="fname" placeholder="Enter your name" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Pet Name</span>
-                        <input type="text" placeholder="Enter your Pet Name" required>
+                        <input type="text" name="pname" placeholder="Enter your Pet Name" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
@@ -53,14 +53,22 @@
                     </div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="Register" onclick='Alert()'>
+                    <input type="submit" value="Register">
                 </div>
             </form>
         </div>
     </div>
 <script>
-function Alert(){
-    alert("Registration Successful.....");
+function validateForm(){
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    else{
+        alert("Registration Successful.....");
+    }
+    
     //location.href = "www.yoursite.com";
 }
 </script>
