@@ -11,17 +11,17 @@
 
 <body>
     <div class="container">
-        <div class="title">Registration</div>
+        <div class="title">Registration for Event</div>
         <div class="content">
-            <form action="#">
+            <form action="index.html">
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
                         <input type="text" placeholder="Enter your name" required>
                     </div>
                     <div class="input-box">
-                        <span class="details">Username</span>
-                        <input type="text" placeholder="Enter your username" required>
+                        <span class="details">Pet Name</span>
+                        <input type="text" placeholder="Enter your Pet Name" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
@@ -53,12 +53,17 @@
                     </div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Register" onclick='Alert()'>
                 </div>
             </form>
         </div>
     </div>
-
+<script>
+function Alert(){
+    alert("Registration Successful.....");
+    //location.href = "www.yoursite.com";
+}
+</script>
 </body>
 
 </html>
