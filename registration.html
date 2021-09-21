@@ -13,19 +13,19 @@
     <div class="container">
         <div class="title">Registration for Event</div>
         <div class="content">
-            <form action="index.html" name="myForm" onsubmit="return validateForm()">
+            <form action="index.html" name="myForm" onsubmit="return new change().a()">
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
-                        <input type="text" name="fname" placeholder="Enter your name" required>
+                        <input type="text" id="fname" name="fname" placeholder="Enter your name" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Pet Name</span>
-                        <input type="text" name="pname" placeholder="Enter your Pet Name" required>
+                        <input type="text" id="petname" name="pname" placeholder="Enter your Pet Name" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="text" placeholder="Enter your email" required>
+                        <input type="text" id="email" placeholder="Enter your email" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone Number</span>
@@ -58,20 +58,28 @@
             </form>
         </div>
     </div>
-<script>
-function validateForm(){
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-    else{
-        alert("Registration Successful.....");
-    }
-    
-    //location.href = "www.yoursite.com";
-}
-</script>
+    <script>
+        class buttonclick {
+            constructor() {
+                this.name = document.getElementById("fname").value;
+                this.pet = document.getElementById("petname").value;
+                this.email = document.getElementById("email").value;
+            }
+        }
+
+        class change extends buttonclick {
+            a = () => {
+                if (this.name == '') {
+                    alert("Name must be filled out");
+                    return false;
+                } else {
+                    var message = "Your Details\nName: " + this.name + "\nPet Name: " + this.pet + "\nEmail: " +
+                        this.email + "\nRegistration Successful.....";
+                    alert(message);
+                }
+            };
+        }
+    </script>
 </body>
 
 </html>
